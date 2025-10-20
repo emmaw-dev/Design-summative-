@@ -1,31 +1,14 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-}
+const facts = [
+  "Dogs can dream",
+  "Dogs can not taste spicy food.",
+  "Dogs sense of smell that is 10,000 to 100,000 times better than humans.",
+  "A dog is a mans best friend."
+];
 
-.card {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  text-align: center;
-  width: 300px;
-}
+const factParagraph = document.getElementById("fact");
+const button = document.getElementById("changeButton");
 
-button {
-  margin-top: 15px;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 10px;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
+button.addEventListener("click", () => {
+  const randomIndex = Math.floor(Math.random() * facts.length);
+  factParagraph.textContent = facts[randomIndex];
+'
