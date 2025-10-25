@@ -11,4 +11,10 @@ const button = document.getElementById("changeButton");
 button.addEventListener("click", () => {
   const randomIndex = Math.floor(Math.random() * facts.length);
   factParagraph.textContent = facts[randomIndex];
-'
+"I love listening to music!"
+button.addEventListener("click", () => {
+  const randomIndex = Math.floor(Math.random() * facts.length);
+  factParagraph.textContent = facts[randomIndex];
+  button.textContent = "Click again for more!";
+});
+
